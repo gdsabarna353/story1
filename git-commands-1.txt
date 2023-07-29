@@ -1,0 +1,207 @@
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~
+$ cd Desktop
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop
+$ mkdir story
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop
+$ cd story
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story
+$ touch chapter1.txt
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story
+$ code chapter1.txt
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story
+$ git init
+Initialized empty Git repository in C:/Users/SABARNA/Desktop/story/.git/
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ ls story
+ls: cannot access 'story': No such file or directory
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ cd ..
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop
+$ ls story
+chapter1.txt
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop
+$ cd story
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ ls -a
+./  ../  .git/  chapter1.txt
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chapter1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git add chapter1.txt
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git ststus
+git: 'ststus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   chapter1.txt
+
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git commit -m "complete chapter 1"
+[master (root-commit) 7eede72] complete chapter 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 chapter1.txt
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git log
+commit 7eede72443932e6a85f1c0de46250a225c17c3b8 (HEAD -> master)
+Author: gdsabarna353 <gdsabarna353@gmail.com>
+Date:   Sat Jul 29 18:50:28 2023 +0530
+
+    complete chapter 1
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git ststus
+git: 'ststus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ touch chapter2.txt
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ code chapter2.txt
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ touch chapter3.txt
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ code chapter3.txt
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chapter2.txt
+        chapter3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git add .
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   chapter2.txt
+        new file:   chapter3.txt
+
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git commit -m "complete chapter 2 and 3"
+[master 8effd16] complete chapter 2 and 3
+ 2 files changed, 2 insertions(+)
+ create mode 100644 chapter2.txt
+ create mode 100644 chapter3.txt
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git log
+commit 8effd162b8f0aa7e9d73b72e972ed6427051c211 (HEAD -> master)
+Author: gdsabarna353 <gdsabarna353@gmail.com>
+Date:   Sat Jul 29 18:58:43 2023 +0530
+
+    complete chapter 2 and 3
+
+commit 7eede72443932e6a85f1c0de46250a225c17c3b8
+Author: gdsabarna353 <gdsabarna353@gmail.com>
+Date:   Sat Jul 29 18:50:28 2023 +0530
+
+    complete chapter 1
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   chapter3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git diff chapter3.txt
+diff --git a/chapter3.txt b/chapter3.txt
+index 9a24770..6a3a7b5 100644
+--- a/chapter3.txt
++++ b/chapter3.txt
+@@ -1 +1,5 @@
+-Ferocious animals can be seen in the dark forests.
+\ No newline at end of file
++sdskjndslkmsdsmssdssdssdssdssdssd",sdmpdsam
++aads,;k
++g;a,
++asdasplk[padkglpfdk dpg kdfkgfdopkopdfkjkior'.;f.'
++df]"
+\ No newline at end of file
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git checkout chapter3.txt
+Updated 1 path from the index
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$ git log
+commit 8effd162b8f0aa7e9d73b72e972ed6427051c211 (HEAD -> master)
+Author: gdsabarna353 <gdsabarna353@gmail.com>
+Date:   Sat Jul 29 18:58:43 2023 +0530
+
+    complete chapter 2 and 3
+
+commit 7eede72443932e6a85f1c0de46250a225c17c3b8
+Author: gdsabarna353 <gdsabarna353@gmail.com>
+Date:   Sat Jul 29 18:50:28 2023 +0530
+
+    complete chapter 1
+
+SABARNA@DESKTOP-GP0I5A0 MINGW64 ~/Desktop/story (master)
+$
